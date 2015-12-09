@@ -1,0 +1,58 @@
+CPU SPECIFICATIONS
+-
+---
+
+ - The processor takes data then instruction
+ - Harvard Architecture
+	 - 256 bit program memory
+	 - 16-256 bit RAM (variable memory)
+		 - Dependent on replacement of RDI and STI with RDN and STN functions
+ - 4 Bit instruction Set:
+	 - 0 - NOP
+		 - No Operation
+			 - Does nothing for one clock cycle
+	 - 1 - LDN
+		 - Load Next
+			 - Loads the next value to the working register
+	 - 2 - LDI
+		 - Load Immediate
+			 - Loads the immediate value to the working register
+	 - 3 - RDI
+		 - Read Immediate
+			 - Reads the contents of the address featured immediately to the working register
+	 - 4 - STI
+		 - Store Immediate
+			 - Stores the current value in the working register in the address featured immediately
+	 - 5 - ADDI
+		 - Add Immediate
+			 - Adds the immediate value to the value in the working register
+	 - 6 - ADDN
+		 - Add Next
+			 - Adds the next value to the value in the working register
+	 - 7 - JPZ
+		 - Jump Zero
+			 - Jumps to the next value as location if the value of the working register is zero
+	 - 8 - JPC
+		 - Jump Carry
+			 - Jumps to the next value as location if the carry bit was raised in the previous operation
+	 - 9 - ANDI
+		 - AND Immediate
+			 - Logically AND with the immediate value and the current value of the working register
+	 - A - ANDN
+		 - AND Next
+			 - Logically AND with the next value and the current value of the working register
+	 - B - ORI
+		 - OR Immediate
+			 - Logically OR with the immidiate value and the current value of the working register
+	 - C - ORN
+		 - OR Next
+			 - Logically OR with the next value and the current value of the working register
+	 - D - NOT
+		 - Inverts the working Register
+			 - Logically NOT the current value of the working register
+	 - E - SLB
+		 - Shift Left Bit
+			 - Shifts the value left by one Bit and detects overflow
+	 - F - SRB
+		 - Shift Right Bit
+			 - Shift the value right by one Bit , preseving sign if possible and detecting overflow
