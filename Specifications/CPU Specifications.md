@@ -1,7 +1,8 @@
 CPU SPECIFICATIONS
--
+=
 ---
-
+Instruction Set:
+-
  - The processor takes data then instruction
  - Harvard Architecture
 	 - 256 bit program memory
@@ -43,7 +44,7 @@ CPU SPECIFICATIONS
 			 - Logically AND with the next value and the current value of the working register
 	 - B - ORI
 		 - OR Immediate
-			 - Logically OR with the immidiate value and the current value of the working register
+			 - Logically OR with the immediate value and the current value of the working register
 	 - C - ORN
 		 - OR Next
 			 - Logically OR with the next value and the current value of the working register
@@ -55,4 +56,22 @@ CPU SPECIFICATIONS
 			 - Shifts the value left by one Bit and detects overflow
 	 - F - SRB
 		 - Shift Right Bit
-			 - Shift the value right by one Bit , preseving sign if possible and detecting overflow
+			 - Shift the value right by one Bit , preserving sign if possible and detecting overflow
+
+ALU:
+-
+- The ALU will have a 3 bit wide control bus, as such it will perform the following options:
+	- 0 - NOP
+	- 1 - ADD
+	- 2 - AND
+	- 3 - OR
+	- 4 - SLB
+	- 5 - SRB
+	- 6 - JPZ
+	- 7 - JPC
+
+RAM:
+-
+- Address IO in memory, dedicate 1 byte to all input and another byte to output
+- address 0x0F reseved for output
+- address 0x0E reseved fro input
